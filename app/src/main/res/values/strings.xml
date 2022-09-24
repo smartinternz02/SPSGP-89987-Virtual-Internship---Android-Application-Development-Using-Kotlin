@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Grocery App</string>
+    <string name="total_heading">Total Cost:</string>
+    <string name="dialog_heading">Add Items to Cart</string>
+    <string name="float_btn_desc">Add new item</string>
+    <string name="input_item_name">Enter Item Name</string>
+    <string name="input_item_quantity">Enter Item Quantity</string>
+    <string name="input_item_cost">Enter Item Price</string>
+    <string name="add_btn_text">ADD</string>
+    <string name="cancel_btn_text">CANCEL</string>
 </resources>
