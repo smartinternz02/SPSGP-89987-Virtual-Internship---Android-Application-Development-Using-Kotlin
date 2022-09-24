@@ -11,7 +11,7 @@
     <color name="activityBackground_light">#FFE1F5FE</color>
     <color name="activityBackground_dark">#FF002135</color>
 
-    <color name="mtrl_textinput_default_box_stroke_color" tools:override ="true">#FF296D98</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override ="true">#FF296D99</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
