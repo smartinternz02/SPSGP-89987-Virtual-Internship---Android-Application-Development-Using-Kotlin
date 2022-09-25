@@ -57,42 +57,39 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
         }
 
         addBtn.setOnClickListener {
-            val itemName: Editable? = itemNameEdt.text
-            val itemPrice: Editable? = itemPriceEdt.text
-            val itemQuantity: Editable? = itemQuantityEdt.text
-            if(itemName != null && itemPrice != null && itemQuantity != null) {
-                val name : String = itemName.toString()
-                val qty : Int = itemQuantity.toString().toInt()
-                val price : Float = itemPrice.toString().toFloat()
-                if(itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemQuantity.isNotEmpty() && qty>0 && price>0) {
-                    val items = GroceryItems(name, qty, price)
-                    groceryViewModal.insert(items)
-                    Toast.makeText(
-                        applicationContext,
-                        "Item Inserted...",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    groceryRVAdapter.notifyDataSetChanged()
-                    dialog.dismiss()
-                } else if(qty<=0) {
-                    Toast.makeText(
-                        applicationContext,
-                        "Enter Valid Quantity...",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else if(price<=0) {
-                    Toast.makeText(
-                        applicationContext,
-                        "Enter Valid Price...",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        applicationContext,
-                        "Invalid Input...",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
+            val itemName: String = itemNameEdt.text.toString()
+            val itemPrice: String = itemPriceEdt.text.toString()
+            val itemQuantity: String = itemQuantityEdt.text.toString()
+            val qty : Int = itemQuantity.toInt()
+            val price : Float = itemPrice.toFloat()
+            if(itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemQuantity.isNotEmpty() && qty>0 && price>0) {
+                val items = GroceryItems(itemName, qty, price)
+                groceryViewModal.insert(items)
+                Toast.makeText(
+                    applicationContext,
+                    "Item Inserted...",
+                    Toast.LENGTH_SHORT
+                ).show()
+                groceryRVAdapter.notifyDataSetChanged()
+                dialog.dismiss()
+            } else if(qty<=0) {
+                Toast.makeText(
+                    applicationContext,
+                    "Enter Valid Quantity...",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else if(price<=0) {
+                Toast.makeText(
+                    applicationContext,
+                    "Enter Valid Price...",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                Toast.makeText(
+                    applicationContext,
+                    "Invalid Input...",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
