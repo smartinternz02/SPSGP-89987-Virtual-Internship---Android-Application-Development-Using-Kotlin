@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grocery App</string>
+    <string name="app_name">Grocery List</string>
     <string name="total_heading">Total Cost:</string>
     <string name="dialog_heading">Add Items to Cart</string>
     <string name="float_btn_desc">Add new item</string>

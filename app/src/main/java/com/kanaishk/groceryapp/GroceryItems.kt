@@ -14,7 +14,7 @@ data class GroceryItems (
     var itemQuantity: Int,
 
     @ColumnInfo(name = "itemPrice")
-    var itemPrice: Int,
+    var itemPrice: Float,
 
 ) {
     @PrimaryKey(autoGenerate = true)

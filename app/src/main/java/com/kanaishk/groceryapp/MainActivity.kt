@@ -51,8 +51,36 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
         val itemPriceEdt = dialog.findViewById<TextInputEditText>(R.id.idEdtItemCost)
         val itemQuantityEdt = dialog.findViewById<TextInputEditText>(R.id.idEdtItemQuantity)
 
+        cancelBtn.setOnClickListener {
+            dialog.dismiss()
+        }
 
+        addBtn.setOnClickListener {
+            val itemName: String = itemNameEdt.text.toString()
+            val itemPrice: String = itemPriceEdt.text.toString()
+            val itemQuantity: String = itemQuantityEdt.text.toString()
+            val qty : Int = itemQuantity.toInt()
+            val price : Float = itemPrice.toFloat()
+            if(itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemQuantity.isNotEmpty()) {
+                val items = GroceryItems(itemName, qty, price)
+                groceryViewModal.insert(items)
+                Toast.makeText(
+                    applicationContext,
+                    "Item Inserted...",
+                    Toast.LENGTH_SHORT
+                ).show()
+                groceryRVAdapter.notifyDataSetChanged()
+                dialog.dismiss()
+            } else {
+                Toast.makeText(
+                    applicationContext,
+                    "Please enter all the data...",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
 
+        dialog.show()
     }
 
     override fun onItemClick(groceryItems: GroceryItems) {
