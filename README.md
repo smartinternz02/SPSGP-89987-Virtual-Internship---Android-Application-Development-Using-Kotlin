@@ -11,8 +11,4 @@ This repository contains the code for Grocery App made as the project submission
 
 ![Item Deleted](https://github.com/smartinternz02/SPSGP-89987-Virtual-Internship---Android-Application-Development-Using-Kotlin/blob/main/app/src/main/res/screenshots/Screenshot_20220925_175055.png?raw=true)
 
-![Demo Video](https://youtu.be/8LQLkdQzy2U)
-
-![Project Report]()
-
-<object data="https://github.com/smartinternz02/SPSGP-89987-Virtual-Internship---Android-Application-Development-Using-Kotlin/blob/main/app/src/main/res/report/Report%20(SmartInternz).pdf" width="1000" height="1000" type='application/pdf'></object>
+![Demo Video](https://www.youtube.com/watch?v=8LQLkdQzy2U)
